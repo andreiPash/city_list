@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "17a9e348-3a31-423d-b8dd-937d2d521033",
+		"name": "City_list_BE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12105069"
+	},
+	"item": [
+		{
+			"name": "cities",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8383/realms/realmA/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6WXVHu6HtSEqEQZtjNx9mwGMgEuO6Dmr",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cityAppBackend",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/backend/cities",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"backend",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "citiesPageable",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8383/realms/realmA/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6WXVHu6HtSEqEQZtjNx9mwGMgEuO6Dmr",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cityAppBackend",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/backend/cities/pageable",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"backend",
+						"cities",
+						"pageable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cityUpdate",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8383/realms/realmA/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6WXVHu6HtSEqEQZtjNx9mwGMgEuO6Dmr",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cityAppBackend",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TESTUpdate\",\n    \"link\": \"https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/backend/city/2/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"backend",
+						"city",
+						"2",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
