@@ -1,0 +1,31 @@
+= City List Spring Boot + Keycloak + Vue 3 Application
+
+[[how-to-run]]
+== How to run
+
+. https://docs.docker.com/install/[Install Docker] on your machine.
+. Install Node.js & npm on your machine.
+. Install Java 17.
+. Install Maven.
+. Checkout project.
+. `cd` to repo folder & run `docker-compose up`. That will run Postgres & Keycloak for you.
+. Build project with `mvn clean install` & Run `CityListApplication.java` in your favorite IDE.
+. `cd` to `front-end` folder & run `npm run serve` to start FE.
+
+[[tech-notes]]
+== Technical notes
+. *FE* is not finished completely (because it's not my best skill but anyway I could build something simple on Vue/Angular/React), so it looks urgly from design perspective, comsumes most of my time & still have 2 bugs:
+.. Update button not sending any request to BE, so changes not doing to store in db
+.. Pagination component also not sending requests to BE, so on click by page number view wouldn't be changed (always present first page)
+. *BE* implemented with ROLE permission for edit. Also I've added Keycloak as a login provider & additional role management tool. In my opinion it could help in maintaning & securing application in future.
+. As for testing I'd like to choose testcontainers & write full blown IT tests for example in Cucumber, but time is out. Anyway few IT tests already present in few modules. Unit tests here wouldn't make much sence because a) I don't have any interesting complex code logic in ap; b) with them we will cover only some parts of Spring Framework, not our app.
+. Postman collection available at root level of the repo
+. We have predefined Users to test BE roles:
+.. `vueuser` with `vueuser+123` password with `ROLE_ADMIN`
+.. `editor` with `editor+role` password with `ROLE_ALLOW_EDIT`
+
+[[app-ports]]
+== Application ports
+. BE is on `8080`
+. FE is on `8081`
+. Keycloak is on `8383`
