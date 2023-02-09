@@ -68,6 +68,31 @@
       },
       "notBefore": 0,
       "groups": []
+    },
+    
+      "createdTimestamp": 1675435570716,
+      "username": "editor",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "requiredActions": [],
+      "credentials": [
+        {
+          "type": "password",
+          "value": "editor+role"
+        }
+      ],
+      "realmRoles": [
+        "default-roles-realma"
+      ],
+      "clientRoles": {
+        "vuejs": [
+          "ROLE_ALLOW_EDIT",
+          "uma_protection"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
     }
   ],
   "clients": [
